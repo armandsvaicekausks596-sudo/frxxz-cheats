@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frxxz Cheats</title>
+    <style>
+        /* ===== RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #ff1a1a;
+            border-radius: 10px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 26, 26, 0.3);
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #ff1a1a;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 20px rgba(255, 26, 26, 0.5);
+        }
+
+        .navbar .logo span {
+            color: #fff;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ccc;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ff1a1a;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff1a1a;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #ff1a1a;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 30px 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 26, 26, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Animated particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #ff1a1a;
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatUp 6s infinite;
+        }
+
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 5s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 1s; animation-duration: 7s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 2s; animation-duration: 6s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 0.5s; animation-duration: 8s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 5.5s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 1.5s; animation-duration: 7.5s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 6.5s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 0.8s; animation-duration: 5.8s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 3.5s; animation-duration: 6.2s; }
+        .particle:nth-child(10) { left: 15%; animation-delay: 1.2s; animation-duration: 7.2s; }
+        .particle:nth-child(11) { left: 25%; animation-delay: 2.8s; animation-duration: 5.3s; }
+        .particle:nth-child(12) { left: 55%; animation-delay: 0.3s; animation-duration: 6.8s; }
+        .particle:nth-child(13) { left: 75%; animation-delay: 1.8s; animation-duration: 7.8s; }
+        .particle:nth-child(14) { left: 85%; animation-delay: 3.2s; animation-duration: 5.6s; }
+        .particle:nth-child(15) { left: 45%; animation-delay: 2.2s; animation-duration: 6.4s; }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(100vh) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.8;
+            }
+            90% {
+                opacity: 0.2;
+            }
+            100% {
+                transform: translateY(-20px) scale(1);
+                opacity: 0;
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #ff1a1a, #ff4444, #ff1a1a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: none;
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                filter: drop-shadow(0 0 20px rgba(255, 26, 26, 0.3));
+            }
+            to {
+                filter: drop-shadow(0 0 40px rgba(255, 26, 26, 0.6));
+            }
+        }
+
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: #999;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .hero .sub-tagline {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 40px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #ff1a1a, #cc0000);
+            color: #fff;
+            box-shadow: 0 5px 30px rgba(255, 26, 26, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255, 26, 26, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #ff1a1a;
+            border: 2px solid #ff1a1a;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 26, 26, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 30px rgba(255, 26, 26, 0.2);
+        }
+
+        /* ===== SECTIONS GENERAL ===== */
+        section {
+            padding: 100px 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 span {
+            color: #ff1a1a;
+        }
+
+        .section-header p {
+            color: #777;
+            font-size: 1.1rem;
+        }
+
+        .section-divider {
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff1a1a, #cc0000);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* ===== CHEATS / PRICING ===== */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: linear-gradient(145deg, #111, #1a1a1a);
+            border: 1px solid rgba(255, 26, 26, 0.15);
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #ff1a1a, transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .pricing-card:hover::before {
+            opacity: 1;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 26, 26, 0.4);
+            box-shadow: 0 20px 60px rgba(255, 26, 26, 0.15);
+        }
+
+        .pricing-card.popular {
+            border-color: rgba(255, 26, 26, 0.5);
+            box-shadow: 0 10px 40px rgba(255, 26, 26, 0.15);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 15px;
+            right: -35px;
+            background: #ff1a1a;
+            color: #fff;
+            padding: 5px 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transform: rotate(45deg);
+            letter-spacing: 1px;
+        }
+
+        .pricing-card .plan-name {
+            font-size: 1.1rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .pricing-card .price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #ff1a1a;
+            margin-bottom: 5px;
+        }
+
+        .pricing-card .price-sub {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .pricing-card .features {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .pricing-card .features li {
+            padding: 8px 0;
+            color: #aaa;
+            font-size: 0.95rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-card .features li::before {
+            content: '✓';
+            color: #ff1a1a;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            padding: 12px;
+        }
+
+        /* ===== SHOWCASE ===== */
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .showcase-card {
+            background: linear-gradient(145deg, #111, #1a1a1a);
+            border: 1px solid rgba(255, 26, 26, 0.15);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 26, 26, 0.4);
+            box-shadow: 0 15px 40px rgba(255, 26, 26, 0.1);
+        }
+
+        .showcase-card .video-embed {
+            width: 100%;
+            height: 200px;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-card .video-embed iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .showcase-card .video-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a0000, #0a0a0a);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .showcase-card .video-placeholder:hover {
+            background: linear-gradient(135deg, #2a0000, #0a0a0a);
+        }
+
+        .play-icon {
+            width: 60px;
+            height: 60px;
+            border: 3px solid #ff1a1a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .play-icon::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 20px solid #ff1a1a;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            margin-left: 5px;
+        }
+
+        .showcase-card .video-placeholder:hover .play-icon {
+            background: rgba(255, 26, 26, 0.2);
+            transform: scale(1.1);
+        }
+
+        .showcase-card .card-body {
+            padding: 25px;
+        }
+
+        .showcase-card h3 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .showcase-card p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .showcase-card .watch-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #ff1a1a;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .showcase-card .watch-link:hover {
+            color: #ff4444;
+            letter-spacing: 1px;
+        }
+
+        /* ===== FAQ ===== */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: linear-gradient(145deg, #111, #1a1a1a);
+            border: 1px solid rgba(255, 26, 26, 0.1);
+            border-radius: 10px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255, 26, 26, 0.3);
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: #ddd;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #ff1a1a;
+        }
+
+        .faq-question .toggle-icon {
+            font-size: 1.5rem;
+            color: #ff1a1a;
+            transition: transform 0.3s ease;
+            min-width: 25px;
+            text-align: center;
+        }
+
+        .faq-item.active .faq-question .toggle-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+            padding: 0 25px 20px;
+        }
+
+        .faq-answer p {
+            color: #888;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* ===== SUPPORT ===== */
+        .support-section {
+            background: linear-gradient(145deg, #111, #0d0d0d);
+            border: 1px solid rgba(255, 26, 26, 0.15);
+            border-radius: 20px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 26, 26, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .support-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .support-section h2 span {
+            color: #ff1a1a;
+        }
+
+        .support-section > p {
+            color: #777;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .support-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 26, 26, 0.1);
+            border-radius: 12px;
+            padding: 30px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .support-card:hover {
+            border-color: rgba(255, 26, 26, 0.4);
+            transform: translateY(-5px);
+            background: rgba(255, 26, 26, 0.05);
+        }
+
+        .support-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .support-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .support-card p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .support-discord-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 50px;
+            background: linear-gradient(135deg, #ff1a1a, #cc0000);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 30px rgba(255, 26, 26, 0.3);
+        }
+
+        .support-discord-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(255, 26, 26, 0.5);
+        }
+
+        /* ===== SOCIALS ===== */
+        .socials-grid {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 30px;
+            background: linear-gradient(145deg, #111, #1a1a1a);
+            border: 1px solid rgba(255, 26, 26, 0.15);
+            border-radius: 12px;
+            transition: all 0.4s ease;
+            font-weight: 600;
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        .social-link:hover {
+            border-color: #ff1a1a;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 26, 26, 0.15);
+            color: #ff1a1a;
+        }
+
+        .social-link .social-icon {
+            font-size: 1.5rem;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            text-align: center;
+            padding: 40px 30px;
+            border-top: 1px solid rgba(255, 26, 26, 0.15);
+            margin-top: 50px;
+        }
+
+        footer p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        footer p span {
+            color: #ff1a1a;
+            font-weight: 700;
+        }
+
+        /* ===== STATUS BAR ===== */
+        .status-bar {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .status-item {
+            text-align: center;
+        }
+
+        .status-item .number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #ff1a1a;
+        }
+
+        .status-item .label {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 5px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: 20px 30px;
+                gap: 15px;
+                border-bottom: 1px solid rgba(255, 26, 26, 0.2);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                letter-spacing: 3px;
+            }
+
+            .hero .tagline {
+                font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .support-section {
+                padding: 40px 20px;
+            }
+
+            .status-bar {
+                gap: 25px;
+            }
+
+            .status-item .number {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+        }
+
+        /* ===== ANIMATIONS ON SCROLL (simple) ===== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Frxxz <span>Cheats</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#cheats">Cheats</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#faq">FAQ</a>
+                <a href="#support">Support</a>
+                <a href="#socials">Socials</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Frxxz Cheats</h1>
+            <p class="tagline">Dominate Every Game. Undetected. Unstoppable.</p>
+            <p class="sub-tagline">Premium cheats crafted by Frxxz</p>
+            <div class="status-bar">
+                <div class="status-item">
+                    <div class="number">24/7</div>
+                    <div class="label">Support</div>
+                </div>
+                <div class="status-item">
+                    <div class="number">UD</div>
+                    <div class="label">Undetected</div>
+                </div>
+                <div class="status-item">
+                    <div class="number">⚡</div>
+                    <div class="label">Instant Delivery</div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#cheats" class="btn btn-primary">View Cheats</a>
+                <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="btn btn-secondary">Join Discord</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CHEATS / PRICING ===== -->
+    <section id="cheats">
+        <div class="section-header fade-in">
+            <h2>Our <span>Cheats</span></h2>
+            <div class="section-divider"></div>
+            <p>Choose the plan that fits your grind</p>
+        </div>
+        <div class="pricing-grid">
+            <!-- Daily -->
+            <div class="pricing-card fade-in">
+                <div class="plan-name">Daily</div>
+                <div class="price">$X</div>
+                <div class="price-sub">per day</div>
+                <ul class="features">
+                    <li>Full Feature Access</li>
+                    <li>Undetected</li>
+                    <li>Auto Updates</li>
+                    <li>Basic Support</li>
+                </ul>
+                <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="btn btn-primary">Buy Now</a>
+            </div>
+            <!-- Weekly -->
+            <div class="pricing-card fade-in">
+                <div class="plan-name">Weekly</div>
+                <div class="price">$X</div>
+                <div class="price-sub">per week</div>
+                <ul class="features">
+                    <li>Full Feature Access</li>
+                    <li>Undetected</li>
+                    <li>Auto Updates</li>
+                    <li>Priority Support</li>
+                </ul>
+                <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="btn btn-primary">Buy Now</a>
+            </div>
+            <!-- Monthly (Popular) -->
+            <div class="pricing-card popular fade-in">
+                <div class="popular-badge">Popular</div>
+                <div class="plan-name">Monthly</div>
+                <div class="price">$X</div>
+                <div class="price-sub">per month</div>
+                <ul class="features">
+                    <li>Full Feature Access</li>
+                    <li>Undetected</li>
+                    <li>Auto Updates</li>
+                    <li>Priority Support</li>
+                    <li>Early Access Features</li>
+                </ul>
+                <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="btn btn-primary">Buy Now</a>
+            </div>
+            <!-- Lifetime -->
+            <div class="pricing-card fade-in">
+                <div class="plan-name">Lifetime</div>
+                <div class="price">$X</div>
+                <div class="price-sub">one time</div>
+                <ul class="features">
+                    <li>Full Feature Access</li>
+                    <li>Undetected Forever</li>
+                    <li>All Future Updates</li>
+                    <li>VIP Support</li>
+                    <li>Early Access Features</li>
+                    <li>Exclusive Perks</li>
+                </ul>
+                <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SHOWCASE ===== -->
+    <section id="showcase">
+        <div class="section-header fade-in">
+            <h2>Cheat <span>Showcase</span></h2>
+            <div class="section-divider"></div>
+            <p>See our cheats in action</p>
+        </div>
+        <div class="showcase-grid">
+            <!-- Video Card 1 -->
+            <div class="showcase-card fade-in">
+                <div class="video-embed">
+                    <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="video-placeholder">
+                        <div class="play-icon"></div>
+                        <span style="color: #666; font-size: 0.85rem;">Click to watch</span>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3>Showcase #1</h3>
+                    <p>Watch our cheat dominate in-game. Aimbot, ESP and more.</p>
+                    <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="watch-link">Watch on YouTube →</a>
+                </div>
+            </div>
+            <!-- Video Card 2 -->
+            <div class="showcase-card fade-in">
+                <div class="video-embed">
+                    <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="video-placeholder">
+                        <div class="play-icon"></div>
+                        <span style="color: #666; font-size: 0.85rem;">Click to watch</span>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3>Showcase #2</h3>
+                    <p>Full feature showcase with smooth gameplay footage.</p>
+                    <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="watch-link">Watch on YouTube →</a>
+                </div>
+            </div>
+            <!-- Video Card 3 -->
+            <div class="showcase-card fade-in">
+                <div class="video-embed">
+                    <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="video-placeholder">
+                        <div class="play-icon"></div>
+                        <span style="color: #666; font-size: 0.85rem;">Click to watch</span>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <h3>Showcase #3</h3>
+                    <p>See why our users trust Frxxz Cheats.</p>
+                    <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="watch-link">Watch on YouTube →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq">
+        <div class="section-header fade-in">
+            <h2>Frequently Asked <span>Questions</span></h2>
+            <div class="section-divider"></div>
+            <p>Got questions? We got answers.</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Is the cheat undetected?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! Our cheats are fully undetected and regularly updated to stay ahead of anti-cheat systems. We monitor detection status 24/7.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    How do I receive the cheat after purchase?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>After purchasing through our Discord, you'll receive instant access with download links and setup instructions. Our team will guide you through everything.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What payment methods do you accept?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept various payment methods. Join our Discord server and open a ticket to see all available payment options.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What happens if the cheat gets detected?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>In the rare case of detection, we push an update ASAP. Active subscribers get compensated with extra time on their subscription.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Can I get a refund?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Due to the nature of digital products, refunds are handled on a case-by-case basis. Contact support on Discord for assistance.</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    What games are supported?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Check our Discord server for the full and up-to-date list of supported games. We're always adding new ones!</p>
+                </div>
+            </div>
+            <div class="faq-item fade-in">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    Do I need to disable antivirus?
+                    <span class="toggle-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Some antivirus software may flag the cheat as a false positive. We recommend adding an exception or temporarily disabling it during use. Full instructions are provided.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SUPPORT ===== -->
+    <section id="support">
+        <div class="support-section fade-in">
+            <h2>Need <span>Help?</span></h2>
+            <div class="section-divider"></div>
+            <p>Our support team is ready to help you out. Reach us through Discord for the fastest response.</p>
+
+            <div class="support-options">
+                <div class="support-card">
+                    <div class="icon">🎫</div>
+                    <h3>Open a Ticket</h3>
+                    <p>Create a support ticket on our Discord for personalized help</p>
+                </div>
+                <div class="support-card">
+                    <div class="icon">💬</div>
+                    <h3>Live Chat</h3>
+                    <p>Talk directly with our team in the Discord support channels</p>
+                </div>
+                <div class="support-card">
+                    <div class="icon">📖</div>
+                    <h3>Setup Guides</h3>
+                    <p>Step-by-step installation and setup guides available on Discord</p>
+                </div>
+            </div>
+
+            <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="support-discord-btn">
+                💬 Join Discord for Support
+            </a>
+        </div>
+    </section>
+
+    <!-- ===== SOCIALS ===== -->
+    <section id="socials">
+        <div class="section-header fade-in">
+            <h2>Follow <span>Us</span></h2>
+            <div class="section-divider"></div>
+            <p>Stay updated and connect with the community</p>
+        </div>
+        <div class="socials-grid fade-in">
+            <a href="https://www.youtube.com/@frxxzheats" target="_blank" class="social-link">
+                <span class="social-icon">▶️</span>
+                YouTube
+            </a>
+            <a href="https://discord.gg/FJdYxkFwzN" target="_blank" class="social-link">
+                <span class="social-icon">💬</span>
+                Discord
+            </a>
+            <!-- Add more socials here later -->
+            <!--
+            <a href="#" target="_blank" class="social-link">
+                <span class="social-icon">🐦</span>
+                Twitter
+            </a>
+            <a href="#" target="_blank" class="social-link">
+                <span class="social-icon">📷</span>
+                Instagram
+            </a>
+            -->
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2025 <span>Frxxz Cheats</span>. All rights reserved. | Built by Frxxz</p>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close nav on link click (mobile)
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // Close all
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Open clicked one (if it wasn't already open)
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Scroll animations
+        const fadeElements = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        fadeElements.forEach(el => observer.observe(el));
+
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '10px 0';
+                navbar.style.boxShadow = '0 5px 30px rgba(0, 0, 0, 0.5)';
+            } else {
+                navbar.style.padding = '15px 0';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
